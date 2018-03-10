@@ -1,7 +1,6 @@
 
 jQuery(document).ready(function() {
-
-    
+finalDate    
 	/*
 		Preloader
 	*/
@@ -19,11 +18,19 @@ jQuery(document).ready(function() {
 	/*
 		Final Countdown Settings
 	*/
-	var finalDate = '2018/06/01';
+  var finalDate = new Date();
+  finalDate.setDate(finalDate.getDate() + 1);
+  var curDate = getDate(localStorage.getItem('FD'));
+
+  function getDate(obj) {
+    return obj ? new Date(JSON.parse(obj).fd) : '';
+  };
+
+  finalDate = (curDate && curDate > new Date()) ? curDate : finalDate;
 
 	$('div.counter').countdown(finalDate)
    	.on('update.countdown', function(event) {
-
+      localStorage.setItem('FD', JSON.stringify({'fd': finalDate}));
    		$(this).html(event.strftime('<div class="days-wrapper"><span class="days">%D</span><br>days</div>' + 
    										 	 '<div class="hours-wrapper"><span class="hours">%H</span><br>hours</div>' + 
    										 	 '<div class="minutes-wrapper"><span class="minutes">%M</span><br>minutes</div>' +
