@@ -55,6 +55,13 @@ jQuery(function($) {
         }
     });
 
+     $("body").on("submit", "#order_form", function(e) {
+       e.preventDefault();
+       var data = $('form').serializeArray();
+       emailjs.send("yahoo", "order_template", {"user_name": data[0].value,"user_email": data[1].value,"phone_number": data[2].value});
+    });
+
+/*emailjs.send("yahoo", "order_template", {"user_name":"Vasya","user_email":"sdd@frf.cvjf","phone_number":"394376434"})*/
     $(window).on("scroll", function(e) {
         if ($(window).scrollTop() > 50) {
             // > 100px from top - show div
