@@ -62,7 +62,6 @@ jQuery(function($) {
        $('.success_mes').html('Заявка успешно отправлена!')
     });
 
-/*emailjs.send("yahoo", "order_template", {"user_name":"Vasya","user_email":"sdd@frf.cvjf","phone_number":"394376434"})*/
     $(window).on("scroll", function(e) {
         if ($(window).scrollTop() > 50) {
             // > 100px from top - show div
