@@ -59,6 +59,11 @@ jQuery(function($) {
        e.preventDefault();
        var data = $('form').serializeArray();
        emailjs.send("yahoo", "order_template", {"user_name": data[0].value,"user_email": data[1].value,"phone_number": data[2].value});
+  fbq('track', 'Purchase', {
+    value: 389,
+    currency: 'UAH',
+  });
+  
        $('.success_mes').html('Заявка успешно отправлена!')
     });
 
