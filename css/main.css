@@ -374,9 +374,6 @@ label{
     text-decoration: none;
     position: relative;
 }
-.navbar-custom nav a:hover{
-    color: #000;
-}
 .main-menu > li > ul{
     overflow: hidden;
     display: none;
@@ -472,7 +469,11 @@ label{
     font-size: 18px;
 }
 .eschool .our-courses h2 span{ color: #000; }
-.eschool .our-courses .course .info{ padding-left: 100px; font-weight: 400; font-size: 15px}
+.eschool .our-courses .course .info { 
+    padding-left: 100px; 
+    font-size: 24px;
+    color: #00000082;
+}
 .eschool .our-courses .course{
     font-size: 16px;
     color: #D3D3D3;
@@ -583,7 +584,7 @@ label{
     margin-top: -50px;
 }
 .eschool .testimonials{
-    font-family: 'Alexander', sans-serif;
+    font-family: 'Bad Script', cursive;
     font-size: 28px;
 }
 .testimonials .owl-dots{
@@ -1368,6 +1369,32 @@ a.load-more, .blog-post a.read-more {
         padding-bottom: 0 !important;
     }
 }
+
+.contact-icon {
+    font-size: 90px;
+    color: #ffc000;
+}
+
+.contact-information {
+    font-size: 23px;
+    padding: 20px 0 0px 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #000000ad;
+}
+
+.contact-batton {
+    margin-top: 50px;
+}
+
+.seize-your-moment {
+    background-color: #ffc000;
+    color: white;
+    font-size: 34px;
+    padding: 74px;
+    text-align: center;
+    font-family: 'Intro', sans-serif;
+}
+
 /*===Break Point===*/
 @media (max-width: 990px) {
     .eschool .services i,.eschool .services figure{ float: none !important; }
@@ -1419,6 +1446,10 @@ a.load-more, .blog-post a.read-more {
     .btn{padding: 10px 20px !important;}
     h1{font-size: 30px;}
     .eschool .demo3 .header .video,.eschool .demo3 .header{margin-bottom: 0;}
+    .seize-your-moment {
+        font-size: 27px;
+    padding: 33px;
+    }
 }
 /*===Break Point===*/
 @media (max-width: 360px) {
@@ -1428,4 +1459,5 @@ a.load-more, .blog-post a.read-more {
         padding: 10px 0 !important;
         font-size: 16px !important;
     }
+    
 }
